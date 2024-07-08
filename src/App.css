@@ -1,0 +1,173 @@
+.start-game-container {
+  position: relative; /* Ensure relative positioning */
+}
+
+.start-game-content {
+  opacity: 1; /* Fully visible initially */
+  transition: opacity 1s ease-in-out; /* Opacity transition over 0.5 seconds */
+}
+
+.game-board-container {
+  position: absolute; /* Position game board absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden from layout */
+  transition: opacity 1s ease-in-out; /* Opacity transition over 0.5 seconds */
+}
+
+.game-board-container.visible {
+  opacity: 1; /* Fully visible when .visible class is applied */
+  visibility: visible; /* Visible in layout */
+}
+
+/* CSS */
+.button,
+.button:after {
+  width: 300px;
+  height: 96px;
+  line-height: 78px;
+  font-size: 35px;
+  font-family:'Times New Roman', Times, serif;
+  background: linear-gradient(45deg, transparent 5%, #c0d428 5%);
+  border: 0;
+  color: #000000;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  margin: auto;
+  max-width: 80%;
+  padding: 10px 0;
+}
+
+.category,
+.value {
+  height: 100px; /* Adjust height as needed */
+  font-size: 1.25rem; /* Adjust font size as needed */
+  text-align: center;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.value {
+  cursor: pointer;
+}
+
+.value-page {
+  position: relative;
+  text-align: center;
+}
+
+.text-center {
+  margin-top: 2rem;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff0; /* Adjust to your desired hover color */
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+

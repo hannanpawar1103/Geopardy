@@ -1,0 +1,31 @@
+/* src/fonts.css */
+@font-face {
+    font-family: 'geoparody';
+    src: url('./Font/geoparodyhv.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'geoparody';
+    src: url('./Font/geoparodyrg.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'babyk';
+    src: url('./Font/BABYK___.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'monkey';
+    src: url('./Font/monkey.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Apply the custom font to the body or specific elements */
+  
+  
